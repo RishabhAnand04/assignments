@@ -4,6 +4,24 @@
 */
 
 function isPalindrome(str) {
+  if(str.length == 0)
+    return true;
+  str = str.toLowerCase();
+  var i =0, j = str.length -1;
+  while(i<j){
+    if(str[i]==str[j])
+      i++, j--;
+    else if(str[i] == ' ')
+      i++;
+    else if(str[j] == ' ')
+      j--;
+    else if(str.charCodeAt(i) < 97)
+      i++;
+    else if(str.charCodeAt(j) < 97)
+      j--;
+    else
+      return false
+  }
   return true;
 }
 

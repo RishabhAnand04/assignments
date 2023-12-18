@@ -7,7 +7,18 @@ Try running it for
 Hint - use Date class exposed in JS
 There is no automated test for this one, this is more for you to understand time goes up as computation goes up
 */
-
-function calculateTime(n) {
-    return 0.01;
+function sum(n){
+    var sum =0;
+    for(let i =1; i<=n;i++){
+        sum += i;
+    }
 }
+function calculateTime(n) {
+    var before = new Date;
+    before = before.getDate();
+    sum(n);
+    var After = new Date;
+    After = After.getDate();
+    console.log(After-before);
+}
+calculateTime(1000000000000)
